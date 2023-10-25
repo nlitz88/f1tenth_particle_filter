@@ -1,6 +1,6 @@
 # Particle Filter Localization
 
-This code implements the MCL algorithm for the RACECAR. 
+This code implements the MCL algorithm for the RACECAR. This particular fork adds the option to make the particle filter publish a map-->odom transformation, making it compliant with [ROS REP 105](https://www.ros.org/reps/rep-0105.html)--meaning that it won't demolish your ROS TF tree! I.e., this is basically just the original mit particle filter repository plus the features generously created by [@KevinGmelin](https://github.com/KevinGmelin) in [this pull request](https://github.com/mit-racecar/particle_filter/pull/9).
 
 [![YouTube Demo](./media/thumb.jpg)](https://www.youtube.com/watch?v=-c_0hSjgLYw)
 

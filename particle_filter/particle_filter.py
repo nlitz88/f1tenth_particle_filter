@@ -85,6 +85,8 @@ class ParticleFiler(Node):
         self.declare_parameter('motion_dispersion_theta')
         self.declare_parameter('scan_topic')
         self.declare_parameter('odometry_topic')
+        self.declare_parameter('publish_map_to_odom_tf')
+        self.declare_parameter('transform_tolerance')
 
         # parameters
         self.ANGLE_STEP           = self.get_parameter('angle_step').value
@@ -98,6 +100,8 @@ class ParticleFiler(Node):
         self.SHOW_FINE_TIMING     = self.get_parameter('fine_timing').value
         self.PUBLISH_ODOM         = self.get_parameter('publish_odom').value
         self.DO_VIZ               = self.get_parameter('viz').value
+        self.PUBLISH_MAP_TO_ODOM  = self.get_parameter('publish_map_to_odom_tf').value
+        self.TRANSFORM_TOLERANCE  = self.get_parameter('transform_tolerance').value
 
         # sensor model constants
         self.Z_SHORT   = self.get_parameter('z_short').value
